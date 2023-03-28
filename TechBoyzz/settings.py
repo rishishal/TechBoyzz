@@ -12,9 +12,6 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
-import environ
-env = environ.Env()
-environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,10 +20,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = 'django-insecure-j4@9-ap6#ctc#51m^xk+@h%(n&=s8@7@%=fjet8#0p2g^su-g0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -81,13 +78,14 @@ WSGI_APPLICATION = 'TechBoyzz.wsgi.application'
 DATABASES ={
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': env('DB_NAME'),
+        'NAME': 'TechBoyzz',
         'HOST': 'localhost',
         'PORT': '3306',
-        'USER': env('DB_USER'),
-        'PASSWORD': env('DB_PASSWORD'),
+        'USER': 'admin',
+        'PASSWORD': 'admin',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
