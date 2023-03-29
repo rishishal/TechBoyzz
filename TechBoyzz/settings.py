@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'TechBackend',
         'USER': 'rishi',
         'PASSWORD': 'rishikumar',
-        'HOST': 'myrdshost.rds.amazonaws.com',
+        'HOST': 'techbackend.c4ccw67cxoxa.ap-south-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
