@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'material.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'whitenoise.runserver_nostatic',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -75,14 +77,14 @@ WSGI_APPLICATION = 'TechBoyzz.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES ={
+DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'TechBoyzz',
-        'HOST': 'localhost',
-        'PORT': '3306',
-        'USER': 'admin',
-        'PASSWORD': 'admin',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'TechBackend',
+        'USER': 'rishi',
+        'PASSWORD': 'rishikumar',
+        'HOST': 'myrdshost.rds.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
